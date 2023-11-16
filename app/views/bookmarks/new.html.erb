@@ -1,0 +1,18 @@
+<h1>Add a movie to your list - <%= @list.name %></h1>
+
+<p> These are the movies you can add</p>
+<% @movies.each do |movie| %>
+<p><%= movie.id  %> <%= movie.title %> </p>
+<% end %>
+
+
+
+
+<h1> Add a movie </h1>
+
+
+<%= simple_form_for(@list) do |f| %>
+  
+  <%= f.input :name %>
+  <%= f.submit %>
+<% end %>
